@@ -24,7 +24,10 @@ namespace WFAPersonelTakibi
 
         private void TsmDuzenle_Click(object sender, EventArgs e)
         {
-
+            Guid id   = (Guid)dgvEmployees.SelectedRows[0].Cells[0].Value;
+            Form4 frm = new Form4(id);
+            this.Hide();
+            frm.ShowDialog();
         }
 
         private void TsmSil_Click(object sender, EventArgs e)
@@ -62,9 +65,9 @@ namespace WFAPersonelTakibi
             dgvEmployees.DataSource = db.Employees.Select(x => new
             {
                 x.Id,
-                Adi = x.FirstName,
-                Soyadi = x.LastName,
-                Mail = x.EMail,
+                Adi     = x.FirstName,
+                Soyadi  = x.LastName,
+                Mail    = x.EMail,
                 Telefon = x.Phone
             }).ToList();
         }

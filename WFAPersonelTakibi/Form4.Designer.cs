@@ -65,6 +65,7 @@
             this.pcbImageUrl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbImageUrl.TabIndex = 13;
             this.pcbImageUrl.TabStop = false;
+            this.pcbImageUrl.Click += new System.EventHandler(this.PcbImageUrl_Click);
             // 
             // metroLabel4
             // 
@@ -398,6 +399,7 @@
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "Güncelle";
             this.btnSave.UseSelectable = true;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // Form4
             // 
