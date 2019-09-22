@@ -14,7 +14,8 @@ namespace WFAPersonelTakibi.Models
     {
         public Employee()
         {
-            this.Id = new Guid();
+            this.Id = Guid.NewGuid();
+            this.ImageUrl = "image.png";
         }
         public Guid Id { get; set; }
 

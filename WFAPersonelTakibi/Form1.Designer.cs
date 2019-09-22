@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnSave = new MetroFramework.Controls.MetroButton();
-            this.pcbImageUrl = new System.Windows.Forms.PictureBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.cmbDepartment = new MetroFramework.Controls.MetroComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -51,9 +50,10 @@
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbImageUrl)).BeginInit();
+            this.pcbImageUrl = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.metroPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImageUrl)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -64,16 +64,7 @@
             this.btnSave.TabIndex = 10;
             this.btnSave.Text = "Kaydet";
             this.btnSave.UseSelectable = true;
-            // 
-            // pcbImageUrl
-            // 
-            this.pcbImageUrl.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pcbImageUrl.Location = new System.Drawing.Point(492, 69);
-            this.pcbImageUrl.Name = "pcbImageUrl";
-            this.pcbImageUrl.Size = new System.Drawing.Size(202, 252);
-            this.pcbImageUrl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbImageUrl.TabIndex = 9;
-            this.pcbImageUrl.TabStop = false;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // metroLabel4
             // 
@@ -144,7 +135,7 @@
             this.txtFirstName.SelectionStart = 0;
             this.txtFirstName.ShortcutsEnabled = true;
             this.txtFirstName.Size = new System.Drawing.Size(242, 23);
-            this.txtFirstName.TabIndex = 1;
+            this.txtFirstName.TabIndex = 0;
             this.txtFirstName.UseSelectable = true;
             this.txtFirstName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtFirstName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -326,7 +317,7 @@
             this.txtMail.SelectionStart = 0;
             this.txtMail.ShortcutsEnabled = true;
             this.txtMail.Size = new System.Drawing.Size(242, 23);
-            this.txtMail.TabIndex = 1;
+            this.txtMail.TabIndex = 3;
             this.txtMail.UseSelectable = true;
             this.txtMail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtMail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -397,6 +388,19 @@
             this.metroLink1.Text = "Personel Listesi";
             this.metroLink1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.metroLink1.UseSelectable = true;
+            this.metroLink1.Click += new System.EventHandler(this.MetroLink1_Click);
+            // 
+            // pcbImageUrl
+            // 
+            this.pcbImageUrl.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pcbImageUrl.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pcbImageUrl.Location = new System.Drawing.Point(492, 69);
+            this.pcbImageUrl.Name = "pcbImageUrl";
+            this.pcbImageUrl.Size = new System.Drawing.Size(202, 252);
+            this.pcbImageUrl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbImageUrl.TabIndex = 9;
+            this.pcbImageUrl.TabStop = false;
+            this.pcbImageUrl.Click += new System.EventHandler(this.PcbImageUrl_Click);
             // 
             // Form1
             // 
@@ -408,11 +412,12 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.metroLink1);
             this.Name = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pcbImageUrl)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImageUrl)).EndInit();
             this.ResumeLayout(false);
 
         }

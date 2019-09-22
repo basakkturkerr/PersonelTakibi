@@ -63,27 +63,35 @@
             // 
             // tsmDuzenle
             // 
+            this.tsmDuzenle.Image = global::WFAPersonelTakibi.Properties.Resources.edit;
             this.tsmDuzenle.Name = "tsmDuzenle";
             this.tsmDuzenle.Size = new System.Drawing.Size(125, 22);
             this.tsmDuzenle.Text = "Düzenle";
+            this.tsmDuzenle.Click += new System.EventHandler(this.TsmDuzenle_Click);
             // 
             // tsmSil
             // 
+            this.tsmSil.Image = global::WFAPersonelTakibi.Properties.Resources.delete2;
             this.tsmSil.Name = "tsmSil";
             this.tsmSil.Size = new System.Drawing.Size(125, 22);
             this.tsmSil.Text = "Sil";
+            this.tsmSil.Click += new System.EventHandler(this.TsmSil_Click);
             // 
             // tsmYeni
             // 
+            this.tsmYeni.Image = global::WFAPersonelTakibi.Properties.Resources.add;
             this.tsmYeni.Name = "tsmYeni";
             this.tsmYeni.Size = new System.Drawing.Size(125, 22);
             this.tsmYeni.Text = "Yeni Kayıt";
+            this.tsmYeni.Click += new System.EventHandler(this.TsmYeni_Click);
             // 
             // tsmDetay
             // 
+            this.tsmDetay.Image = global::WFAPersonelTakibi.Properties.Resources.detail;
             this.tsmDetay.Name = "tsmDetay";
             this.tsmDetay.Size = new System.Drawing.Size(125, 22);
             this.tsmDetay.Text = "Detay";
+            this.tsmDetay.Click += new System.EventHandler(this.TsmDetay_Click);
             // 
             // Form2
             // 
@@ -92,6 +100,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgvEmployees);
             this.Name = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).EndInit();
             this.cmsMenu.ResumeLayout(false);
             this.ResumeLayout(false);
